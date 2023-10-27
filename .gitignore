@@ -48,8 +48,10 @@ _deps
 
 
 ## Project specific
+# Xmake cache
+.xmake/
+build/
+
 /.idea/
 /.vscode/
-/.xmake/
-/build/
 CMakeLists.txt
