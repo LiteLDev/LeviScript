@@ -1,4 +1,4 @@
-## C++
+## https://github.com/github/gitignore/blob/main/C++.gitignore
 # Prerequisites
 *.d
 
@@ -33,7 +33,7 @@
 *.app
 
 
-## CMake
+## https://github.com/github/gitignore/blob/main/CMake.gitignore
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -47,10 +47,9 @@ CTestTestfile.cmake
 _deps
 
 
-## Others
-.idea
-.vscode
-
-build
-docs
-lib
+## Project specific
+/.idea/
+/.vscode/
+/.xmake/
+/build/
+CMakeLists.txt
