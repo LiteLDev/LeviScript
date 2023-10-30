@@ -5,6 +5,13 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        backend:
+          - lua
+          - nodejs
+          - python310
+          - quickjs
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,13 +24,13 @@ jobs:
           xmake repo -u
 
       - run: |
-          xmake f -a x64 -m release -p windows -v -y
+          xmake f -a x64 -m release -p windows -v -y --backend=${{ matrix.backend }}
 
       - run: |
           xmake -w -y
 
       - uses: actions/upload-artifact@v3
         with:
-          name: leviscript-windows-x64-${{ github.sha }}
+          name: leviscript-${{ matrix.backend }}-windows-x64-${{ github.sha }}
           path: |
             build/windows/x64/release/
