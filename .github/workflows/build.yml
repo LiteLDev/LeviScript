@@ -15,8 +15,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: true
 
       - uses: xmake-io/github-action-setup-xmake@v1
       

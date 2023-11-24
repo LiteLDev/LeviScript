@@ -47,11 +47,10 @@ CTestTestfile.cmake
 _deps
 
 
-## Project specific
-# Xmake cache
-.xmake/
-build/
+## XMake
+/.xmake/
+/build/
+/CMakeLists.txt
 
-/.idea/
-/.vscode/
-CMakeLists.txt
+
+## Project specific

@@ -32,12 +32,22 @@ body:
   - type: input
     attributes:
       label: Platform
-      description: The platform you are using. (e.g. Windows 10, macOS 10.15, Ubuntu 20.04)
+      description: The platform you are using. (e.g. Windows 10)
 
   - type: input
     attributes:
-      label: Version
-      description: The version of the application you are using. (e.g. 1.0.0)
+      label: BDS Version
+      description: The version of BDS you are using. (e.g. 1.20.32.1)
+
+  - type: input
+    attributes:
+      label: LeviLamina Version
+      description: The version of LeviLamina you are using. (e.g. 1.0.0)
+
+  - type: input
+    attributes:
+      label: LeviScript Version
+      description: The version of LeviScript you are using. (e.g. 1.0.0)
 
   - type: textarea
     attributes:
