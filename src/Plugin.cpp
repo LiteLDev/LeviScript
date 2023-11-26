@@ -13,21 +13,32 @@ bool Plugin::load(ll::plugin::Plugin& self) {
     // Set the plugin handle.
     this->mSelf = &self;
 
+    // Code for loading the plugin goes here.
+
     this->getLogger().info("Plugin loaded");
     return true;
 }
 
 bool Plugin::unload(ll::plugin::Plugin& self) {
+
+    // Code for unloading the plugin goes here.
+
     this->getLogger().info("Plugin unloaded");
     return true;
 }
 
 bool Plugin::enable(ll::plugin::Plugin& self) {
+
+    // Code for enabling the plugin goes here.
+
     this->getLogger().info("Plugin enabled");
     return true;
 }
 
 bool Plugin::disable(ll::plugin::Plugin& self) {
+
+    // Code for disabling the plugin goes here.
+
     this->getLogger().info("Plugin disabled");
     return true;
 }

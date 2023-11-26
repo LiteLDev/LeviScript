@@ -31,7 +31,8 @@ jobs:
         with:
           name: leviscript-${{ matrix.backend }}-windows-x64-${{ github.sha }}
           path: |
-            build/windows/x64/release/plugin.dll
+            build/windows/x64/release/leviscript-${{ matrix.backend }}.dll
+            build/windows/x64/release/leviscript-${{ matrix.backend }}.pdb
 
   upload-to-release:
     needs:
