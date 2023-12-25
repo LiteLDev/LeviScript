@@ -22,7 +22,7 @@ jobs:
           xmake repo -u
 
       - run: |
-          xmake f -a x64 -m release -p windows -v -y --backend=${{ matrix.backend }}
+          xmake f -a x64 -m releasedbg -p windows -v -y --backend=${{ matrix.backend }}
 
       - run: |
           xmake -w -y
@@ -31,8 +31,8 @@ jobs:
         with:
           name: leviscript-${{ matrix.backend }}-windows-x64-${{ github.sha }}
           path: |
-            build/windows/x64/release/leviscript-${{ matrix.backend }}.dll
-            build/windows/x64/release/leviscript-${{ matrix.backend }}.pdb
+            build/windows/x64/releasedbg/leviscript-${{ matrix.backend }}.dll
+            build/windows/x64/releasedbg/leviscript-${{ matrix.backend }}.pdb
 
   upload-to-release:
     needs:
