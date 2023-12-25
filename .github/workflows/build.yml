@@ -33,3 +33,18 @@ jobs:
           path: |
             build/windows/x64/releasedbg/leviscript-${{ matrix.backend }}.dll
             build/windows/x64/releasedbg/leviscript-${{ matrix.backend }}.pdb
+
+  check-style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - run: |
+          npm install clang-format@1.8.0
+
+      - run: |
+          npx clang-format --dry-run --Werror $(find . -type f -name '*.cpp' -o -name '*.h')
