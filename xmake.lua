@@ -1,8 +1,7 @@
 add_rules("mode.debug", "mode.release", "mode.releasedbg")
 
 add_repositories("liteldev-repo https://github.com/LiteLDev/xmake-repo.git")
-add_requires("levilamina 0.5.0")
-add_requires("scriptx", {configs = {backend = get_config("backend")}})
+add_requires("levilamina 0.5.1")
 
 if not has_config("vs_runtime") then
     set_runtimes("MD")
@@ -27,8 +26,7 @@ target("plugin")
         "src"
     )
     add_packages(
-        "levilamina",
-        "scriptx"
+        "levilamina"
     )
     add_shflags(
         "/DELAYLOAD:bedrock_server.dll"
