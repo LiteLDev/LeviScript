@@ -1,5 +1,4 @@
 #include <ll/api/plugin/Plugin.h>
-#include <ScriptX/ScriptX.h>
 
 #include "ls/Plugin.h"
 
