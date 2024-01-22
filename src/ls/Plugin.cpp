@@ -1,9 +1,8 @@
 #include "Plugin.h"
 
+#include <ll/api/plugin/Plugin.h>
 #include <stdexcept>
 #include <string_view>
-
-#include <ll/api/plugin/Plugin.h>
 
 namespace plugins {
 

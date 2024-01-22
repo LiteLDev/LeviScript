@@ -1,9 +1,8 @@
 #pragma once
 
-#include <string_view>
-
 #include <ll/api/Logger.h>
 #include <ll/api/plugin/Plugin.h>
+#include <string_view>
 
 namespace plugins {
 
