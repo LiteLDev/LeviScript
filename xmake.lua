@@ -18,7 +18,7 @@ package("scriptx")
         "include/scriptx/src/include/"
     )
     add_urls("https://github.com/LiteLDev/ScriptX/releases/download/v$(version)/scriptx-windows-x64.zip")
-    add_versions("0.1.0", "c0077eed8daf0e50a455cfde6396c2c04ba4d7a03a40424aa7da3571f9e8b7b4")
+    add_versions("0.1.0", "d47729b73f37eaeb6c5dead4301e16feffd692ca10156a42449826997a1256c2")
 
     on_install(function (package)
         os.cp("*", package:installdir())
@@ -40,7 +40,7 @@ package("scriptx")
         package:add("defines", "SCRIPTX_BACKEND_TRAIT_PREFIX=../backend/" .. scriptx_backend[backend] .. "/trait/Trait")
         package:add("includedirs", "include/" .. backend .. "/")
         package:add("links", backend)
-        package:add("links", "scriptx/" .. scriptx_backend[backend])
+        package:add("links", "scriptx_" .. scriptx_backend[backend])
     end)
 
 target("plugin")
