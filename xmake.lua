@@ -29,7 +29,6 @@ package("scriptx")
     end)
 
     on_load(function (package)
-        print("Loading")
         local backend = package:config("backend")
 
         local scriptx_backend = {
