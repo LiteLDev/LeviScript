@@ -17,10 +17,6 @@ package("scriptx")
     add_includedirs(
         "include/scriptx/src/include/"
     )
-    add_linkdirs(
-        "lib/",
-        "lib/scriptx/"
-    )
     add_urls("https://github.com/LiteLDev/ScriptX/releases/download/v$(version)/scriptx-windows-x64.zip")
     add_versions("0.1.0", "c0077eed8daf0e50a455cfde6396c2c04ba4d7a03a40424aa7da3571f9e8b7b4")
 
@@ -37,12 +33,14 @@ package("scriptx")
             python310 = "Python",
             quickjs = "QuickJs",
         }
+
+        print("Using ScriptX config: backend=" .. backend .. ", scriptx_backend=" .. scriptx_backend[backend])
         
         package:add("defines", "SCRIPTX_BACKEND=" .. scriptx_backend[backend])
         package:add("defines", "SCRIPTX_BACKEND_TRAIT_PREFIX=../backend/" .. scriptx_backend[backend] .. "/trait/Trait")
         package:add("includedirs", "include/" .. backend .. "/")
         package:add("links", backend)
-        package:add("links", scriptx_backend[backend])
+        package:add("links", "scriptx/" .. scriptx_backend[backend])
     end)
 
 target("plugin")
